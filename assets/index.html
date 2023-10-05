@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container m-5">
+        <div class="row">
+            <!-- barra de pesquisa -->
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <div class="d-flex col-12">
+                        <input id="pesquisar" class="form-control me-2" type="search" placeholder="Digite o nome"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit" onclick="buscar()">Buscar</button>
+                    </div>
+                </div>
+            </nav>
+            <!-- tabela de clientes -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Estado</th> <!-- validar se é UF -->
+                        <th scope="col">Cep</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="infor" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="infor-title" class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="infor-name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="infor-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="infor-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="infor-email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="infor-address" class="form-label">Endereço</label>
+                            <input type="text" class="form-control" id="infor-address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="infor-city" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="infor-city">
+                        </div>
+                        <div class="mb-3">
+                            <label for="infor-state" class="form-label">Estado</label>
+                            <input type="text" class="form-control" id="infor-state">
+                        </div>
+                        <div class="mb-3">
+                            <label for="infor-cep" class="form-label">CEP</label>
+                            <input type="text" class="form-control" id="infor-cep">
+                        </div>
+                        <div class="mb-3">
+                            <label for="infor-phoneNumber" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="infor-phoneNumber">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="enviar" data-type="" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
